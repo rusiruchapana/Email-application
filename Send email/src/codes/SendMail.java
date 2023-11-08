@@ -19,7 +19,7 @@ public class SendMail {
         public static void send(String mail, String subject, String message, File[] files){
             
             String userEmail = "rovansyna@gmail.com";
-            String userPassword = "rovansynacC@";
+            String userPassword = "jaom vgek hrma srum";
             
             Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
