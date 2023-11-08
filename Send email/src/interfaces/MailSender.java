@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package interfaces;
 import codes.SendMail;
 import java.io.File;
@@ -88,6 +85,11 @@ public class MailSender extends javax.swing.JFrame {
 
         cancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         cancelBtn.setText("Cancel");
+        cancelBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelBtnMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
         container.setLayout(containerLayout);
@@ -200,6 +202,13 @@ public class MailSender extends javax.swing.JFrame {
         SendMail obj = new SendMail();
         obj.send(recieverMail, subject, message, attachments);
     }//GEN-LAST:event_sendBtnMouseClicked
+
+    private void cancelBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelBtnMouseClicked
+           sendField.setText("");
+           subjectField.setText("");
+           messageField.setText("");
+           browseName.setText("");
+    }//GEN-LAST:event_cancelBtnMouseClicked
 
    
     public static void main(String args[]) {
