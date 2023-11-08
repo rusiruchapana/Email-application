@@ -11,6 +11,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.swing.JOptionPane;
 
 
 
@@ -58,8 +59,8 @@ public class SendMail {
                     
                     emailMessage.setContent(multipart);
                     Transport.send(emailMessage);
-                    System.out.println("Email sent successfully.");
-                    
+                    //System.out.println("Email sent successfully.");
+                    JOptionPane.showMessageDialog(null, "Succesfully sent Email congradulation!!!.");
                     
                     
             } catch (Exception e) {
